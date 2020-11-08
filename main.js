@@ -1,18 +1,12 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const red = document.getElementById('red');
-const green = document.getElementById('green');
-const purple = document.getElementById('purple');
-const yellow = document.getElementById('yellow');
+const colors = document.getElementById('colors');
 let isPainting = false;
 
 canvas.addEventListener('mousedown', startPosition);
 canvas.addEventListener('mouseup', finishedPosition);
 canvas.addEventListener('mousemove', paint);
-red.addEventListener('click', changeColor);
-green.addEventListener('click', changeColor);
-purple.addEventListener('click', changeColor);
-yellow.addEventListener('click', changeColor);
+colors.addEventListener('click', changeColor);
 
 function startPosition() {
   isPainting = true;
