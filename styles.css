@@ -1,0 +1,23 @@
+body {
+  cursor: crosshair;
+}
+
+#colors {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
+.color {
+  width: 80px;
+}
+
+.color:hover {
+  cursor: pointer;
+}
+
+.page-height {
+  height: 100vh;
+}
