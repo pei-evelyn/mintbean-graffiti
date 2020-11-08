@@ -9,10 +9,10 @@ let isPainting = false;
 canvas.addEventListener('mousedown', startPosition);
 canvas.addEventListener('mouseup', finishedPosition);
 canvas.addEventListener('mousemove', paint);
-red.addEventListener('click', changeToRed);
-green.addEventListener('click', changeToGreen);
-purple.addEventListener('click', changeTopPurple);
-yellow.addEventListener('click', changeToYellow);
+red.addEventListener('click', changeColor);
+green.addEventListener('click', changeColor);
+purple.addEventListener('click', changeColor);
+yellow.addEventListener('click', changeColor);
 
 function startPosition() {
   isPainting = true;
@@ -34,18 +34,21 @@ function paint() {
   ctx.moveTo(event.clientX, event.clientY);
 }
 
-function changeToRed() {
-  ctx.strokeStyle = 'rgb(252, 34, 43)';
-}
-
-function changeToGreen() {
-  ctx.strokeStyle = 'rgb(62, 178, 78)';
-}
-function changeTopPurple() {
-  ctx.strokeStyle = 'rgb(79, 33, 138)';
-}
-function changeToYellow() {
-  ctx.strokeStyle = 'rgb(254, 203, 47)';
+function changeColor() {
+  switch (event.target.id) {
+    case 'red':
+    ctx.strokeStyle = 'rgb(252, 34, 43)';
+    break;
+    case 'green':
+    ctx.strokeStyle = 'rgb(62, 178, 78)';
+    break;
+    case 'purple':
+    ctx.strokeStyle = 'rgb(79, 33, 138)';
+    break;
+    case 'yellow':
+    ctx.strokeStyle = 'rgb(254, 203, 47)';
+    break;
+  }
 }
 
 function start() {
