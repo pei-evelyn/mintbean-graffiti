@@ -14,12 +14,28 @@ body {
   width: 80px;
 }
 
-.color:hover {
+.color:hover,
+#save:hover,
+#trash:hover {
   cursor: pointer;
 }
 
 .page-height {
   height: 100vh;
   background-image: url('images/wall-bg.png');
-  /* background-repeat: repeat; */
+  position: relative;
+}
+
+#trash {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  width: 110px;
+}
+
+#save {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  width: 110px;
 }
