@@ -8,6 +8,9 @@ canvas.addEventListener('mouseup', finishedPosition);
 canvas.addEventListener('mousemove', paint);
 colors.addEventListener('click', changeColor);
 
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
 function startPosition() {
   isPainting = true;
   paint(event);

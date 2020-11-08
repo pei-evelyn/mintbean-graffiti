@@ -20,4 +20,6 @@ body {
 
 .page-height {
   height: 100vh;
+  background-image: url('images/wall-bg.png');
+  /* background-repeat: repeat; */
 }
