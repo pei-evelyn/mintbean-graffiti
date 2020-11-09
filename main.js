@@ -3,6 +3,7 @@ const ctx = canvas.getContext('2d');
 const colors = document.getElementById('colors');
 const reticles = document.getElementById('reticles');
 const reticleColor = document.querySelectorAll('.reticle-color');
+const trash = document.getElementById('trash');
 let isPainting = false;
 const saveBtn = document.getElementById('save-btn');
 const red = 'rgb(252, 34, 43)';
@@ -16,6 +17,8 @@ canvas.addEventListener('mousemove', paint);
 colors.addEventListener('click', changeColor);
 saveBtn.addEventListener('click', saveImg);
 reticles.addEventListener('click', setReticleSize);
+trash.addEventListener('click', clearCanvas);
+
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -98,6 +101,9 @@ function saveImg() {
   saveBtn.setAttribute('href', dataURL);
 }
 
+function clearCanvas() {
+  ctx.clearRect(0,0,canvas.width, canvas.height);
+}
 
 start();
 
