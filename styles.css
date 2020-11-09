@@ -22,7 +22,7 @@ body {
 
 .page-height {
   height: 100vh;
-  background-image: url('images/wall-bg.png');
+  background-image: url("images/wall-bg.png");
   position: relative;
 }
 
@@ -73,4 +73,12 @@ body {
 
 .reticle-color {
   background-color: rgb(252, 34, 43);
+}
+
+.modal-mario {
+  width: 20%;
+}
+
+.modal-cloud {
+  width: 80%;
 }
