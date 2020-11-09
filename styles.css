@@ -39,3 +39,38 @@ body {
   top: 3%;
   width: 110px;
 }
+
+#reticle-1 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+}
+
+#reticle-2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+}
+
+#reticle-3 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+
+#reticles {
+  position: absolute;
+  bottom: 5%;
+  background-color: white;
+  border: 2px solid black;
+}
+
+#reticle-1:hover,
+#reticle-2:hover,
+#reticle-3:hover {
+  cursor: pointer;
+}
+
+.reticle-color {
+  background-color: rgb(252, 34, 43);
+}
