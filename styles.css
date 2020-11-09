@@ -44,21 +44,18 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50px;
-  background-color: black;
 }
 
 #reticle-2 {
   width: 20px;
   height: 20px;
   border-radius: 50px;
-  background-color: black;
 }
 
 #reticle-3 {
   width: 30px;
   height: 30px;
   border-radius: 50px;
-  background-color: black;
 }
 
 #reticles {
@@ -72,4 +69,8 @@ body {
 #reticle-2:hover,
 #reticle-3:hover {
   cursor: pointer;
+}
+
+.reticle-color {
+  background-color: rgb(252, 34, 43);
 }
