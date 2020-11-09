@@ -4,11 +4,13 @@ const colors = document.getElementById('colors');
 const reticles = document.getElementById('reticles');
 const reticleColor = document.querySelectorAll('.reticle-color');
 let isPainting = false;
+const saveBtn = document.getElementById('save-btn');
 
 canvas.addEventListener('mousedown', startPosition);
 canvas.addEventListener('mouseup', finishedPosition);
 canvas.addEventListener('mousemove', paint);
 colors.addEventListener('click', changeColor);
+saveBtn.addEventListener('click', saveImg);
 reticles.addEventListener('click', setReticleSize);
 
 canvas.width = window.innerWidth;
@@ -82,6 +84,11 @@ function setReticleColor(color) {
 function start() {
   ctx.strokeStyle = 'rgb(252, 34, 43)';
   ctx.lineWidth = 20;
+}
+
+function saveImg() {
+  const dataURL = canvas.toDataURL('image/png');
+  saveBtn.setAttribute('href', dataURL);
 }
 
 start();
