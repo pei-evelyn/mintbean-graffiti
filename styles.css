@@ -1,5 +1,5 @@
 body {
-  cursor: crosshair;
+  cursor: url(images/spray-can.png), crosshair;
 }
 
 #colors {
@@ -12,11 +12,10 @@ body {
 
 .color {
   width: 80px;
+  filter: drop-shadow(0 0 0.6rem #000000);
 }
 
-.color:hover,
-#save:hover,
-#trash:hover {
+.color:hover, #save:hover, #trash:hover, #reticle-1:hover, #reticle-2:hover, #reticle-3:hover {
   cursor: pointer;
 }
 
@@ -31,6 +30,7 @@ body {
   top: 3%;
   left: 3%;
   width: 110px;
+  filter: drop-shadow(0 0 0.3rem #000000);
 }
 
 #save {
@@ -38,6 +38,7 @@ body {
   right: 3%;
   top: 3%;
   width: 110px;
+  filter: drop-shadow(0 0 0.3rem #000000);
 }
 
 #reticle-1 {
@@ -63,12 +64,7 @@ body {
   bottom: 5%;
   background-color: white;
   border: 2px solid black;
-}
-
-#reticle-1:hover,
-#reticle-2:hover,
-#reticle-3:hover {
-  cursor: pointer;
+  filter: drop-shadow(0 0 0.3rem #000000);
 }
 
 .reticle-color {

@@ -22,8 +22,8 @@ trash.addEventListener('click', clearCanvas);
 modal.addEventListener('load', openModal);
 
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = window.innerWidth - 10;
+canvas.height = window.innerHeight - 10;
 
 function startPosition() {
   isPainting = true;
