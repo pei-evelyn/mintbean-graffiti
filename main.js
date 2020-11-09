@@ -1,12 +1,14 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const colors = document.getElementById('colors');
+const reticles = document.getElementById('reticles');
 let isPainting = false;
 
 canvas.addEventListener('mousedown', startPosition);
 canvas.addEventListener('mouseup', finishedPosition);
 canvas.addEventListener('mousemove', paint);
 colors.addEventListener('click', changeColor);
+reticles.addEventListener('click', changeReticle);
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -23,7 +25,6 @@ function finishedPosition() {
 
 function paint() {
   if (!isPainting) return;
-  ctx.lineWidth = 10;
   ctx.lineCap = 'round';
   ctx.lineTo(event.clientX, event.clientY);
   ctx.stroke();
@@ -48,8 +49,23 @@ function changeColor() {
   }
 }
 
+function changeReticle() {
+  switch (event.target.id) {
+    case 'reticle-1':
+      ctx.lineWidth = 10;
+      break;
+    case 'reticle-2':
+      ctx.lineWidth = 20;
+      break;
+    case 'reticle-3':
+      ctx.lineWidth = 30;
+      break;
+  }
+}
+
 function start() {
   ctx.strokeStyle = 'rgb(252, 34, 43)';
+  ctx.lineWidth = 20;
 }
 
 start();

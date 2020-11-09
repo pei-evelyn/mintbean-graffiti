@@ -40,21 +40,21 @@ body {
   width: 110px;
 }
 
-.reticle-1 {
+#reticle-1 {
   width: 10px;
   height: 10px;
   border-radius: 50px;
   background-color: black;
 }
 
-.reticle-2 {
+#reticle-2 {
   width: 20px;
   height: 20px;
   border-radius: 50px;
   background-color: black;
 }
 
-.reticle-3 {
+#reticle-3 {
   width: 30px;
   height: 30px;
   border-radius: 50px;
@@ -68,8 +68,8 @@ body {
   border: 2px solid black;
 }
 
-.reticle-1:hover,
-.reticle-2:hover,
-.reticle-3:hover {
+#reticle-1:hover,
+#reticle-2:hover,
+#reticle-3:hover {
   cursor: pointer;
 }
