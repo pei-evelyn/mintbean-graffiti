@@ -2,11 +2,13 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const colors = document.getElementById('colors');
 let isPainting = false;
+const saveBtn = document.getElementById('save-btn');
 
 canvas.addEventListener('mousedown', startPosition);
 canvas.addEventListener('mouseup', finishedPosition);
 canvas.addEventListener('mousemove', paint);
 colors.addEventListener('click', changeColor);
+saveBtn.addEventListener('click', saveImg)
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -50,6 +52,12 @@ function changeColor() {
 
 function start() {
   ctx.strokeStyle = 'rgb(252, 34, 43)';
+}
+
+function saveImg() {
+  const dataURL = canvas.toDataURL('image/png');
+  console.log(dataURL)
+  document.write(`<img src`)
 }
 
 start();
