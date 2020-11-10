@@ -19,6 +19,9 @@ let isPainting = false;
 canvas.addEventListener('mousedown', startPosition);
 canvas.addEventListener('mouseup', finishedPosition);
 canvas.addEventListener('mousemove', paint);
+canvas.addEventListener("touchstart", convertTouchstartToMousedown);
+canvas.addEventListener("touchend", convertTouchendToMouseup);
+canvas.addEventListener("touchmove", convertTouchmoveToMousemove);
 colors.addEventListener('click', handleColorClick);
 saveBtn.addEventListener('click', saveImg);
 reticles.addEventListener('click', setReticleSize);
@@ -27,9 +30,7 @@ introModal.addEventListener('load', openModal);
 starBtn.addEventListener('click', hideModal);
 colorInput.addEventListener('focusout', handleColorClick);
 colorModalClose.addEventListener('click', closeColorModal);
-
-canvas.width = window.innerWidth - 10;
-canvas.height = window.innerHeight - 10;
+window.addEventListener('resize', resizeCanvas);
 
 function startPosition() {
   isPainting = true;
@@ -48,6 +49,29 @@ function paint() {
   ctx.stroke();
   ctx.beginPath();
   ctx.moveTo(event.clientX, event.clientY);
+}
+
+function convertTouchstartToMousedown() {
+  const touch = event.touches[0];
+  const mouseEvent = new MouseEvent("mousedown", {
+    clientX: touch.clientX,
+    clientY: touch.clientY
+  });
+  canvas.dispatchEvent(mouseEvent);
+}
+
+function convertTouchendToMouseup() {
+  const mouseEvent = new MouseEvent("mouseup", {});
+  canvas.dispatchEvent(mouseEvent);
+}
+
+function convertTouchmoveToMousemove() {
+  const touch = event.touches[0];
+  const mouseEvent = new MouseEvent("mousemove", {
+    clientX: touch.clientX,
+    clientY: touch.clientY
+  });
+  canvas.dispatchEvent(mouseEvent);
 }
 
 function handleColorClick() {
@@ -71,16 +95,12 @@ function handleColorClick() {
 }
 
 function setReticleSize() {
-  switch (event.target.id) {
-    case 'reticle-1':
-      ctx.lineWidth = 10;
-      break;
-    case 'reticle-2':
-      ctx.lineWidth = 20;
-      break;
-    case 'reticle-3':
-      ctx.lineWidth = 30;
-      break;
+  if (event.target.id === 'reticle-box-1' || event.target.parentElement.id === 'reticle-box-1') {
+    ctx.lineWidth = 10;
+  } else if (event.target.id === 'reticle-box-2' || event.target.parentElement.id === 'reticle-box-2') {
+    ctx.lineWidth = 20;
+  } else if (event.target.id === 'reticle-box-3' || event.target.parentElement.id === 'reticle-box-3') {
+    ctx.lineWidth = 30;
   }
 }
 
@@ -93,6 +113,8 @@ function setColor(color) {
 }
 
 function start() {
+  canvas.width = window.innerWidth - 10;
+  canvas.height = window.innerHeight - 10;
   ctx.strokeStyle = red;
   ctx.shadowColor = red;
   ctx.shadowOffsetX= 0;
@@ -125,6 +147,17 @@ function openColorModal() {
 
 function closeColorModal() {
   colorModal.classList.remove('show', 'd-block')
+}
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth - 10;
+  canvas.height = window.innerHeight - 10;
+  ctx.strokeStyle = red;
+  ctx.shadowColor = red;
+  ctx.shadowOffsetX= 0;
+  ctx.shadowOffsetY = 0;
+  ctx.shadowBlur = 10;
+  ctx.lineWidth = 20;
 }
 
 start();
