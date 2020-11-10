@@ -10,7 +10,8 @@ const red = 'rgb(252, 34, 43)';
 const green = 'rgb(62, 178, 78)';
 const purple = 'rgb(79, 33, 138)';
 const yellow = 'rgb(254, 203, 47)';
-const modal = document.getElementById('instructions');
+const introModal = document.getElementById('instructions');
+const starBtn = document.querySelector('.star-btn');
 
 canvas.addEventListener('mousedown', startPosition);
 canvas.addEventListener('mouseup', finishedPosition);
@@ -19,7 +20,8 @@ colors.addEventListener('click', changeColor);
 saveBtn.addEventListener('click', saveImg);
 reticles.addEventListener('click', setReticleSize);
 trash.addEventListener('click', clearCanvas);
-modal.addEventListener('load', openModal);
+introModal.addEventListener('load', openModal);
+starBtn.addEventListener('click', hideModal);
 
 
 canvas.width = window.innerWidth - 10;
@@ -109,7 +111,11 @@ function clearCanvas() {
 }
 
 function openModal(){
-  modal.showModal();
+  introModal.showModal();
+}
+
+function hideModal(){
+  introModal.close();
 }
 
 start();
