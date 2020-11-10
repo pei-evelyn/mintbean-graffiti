@@ -138,7 +138,8 @@ body {
 }
 
 .modal:hover,
-#reticles {
+#reticles,
+#instructions {
   cursor: default;
 }
 
