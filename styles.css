@@ -15,13 +15,18 @@ body {
   filter: drop-shadow(0 0 0.6rem #000000);
 }
 
-.color:hover, #save:hover, #trash:hover, #reticle-1:hover, #reticle-2:hover, #reticle-3:hover {
+.color:hover,
+#save:hover,
+#trash:hover,
+#reticle-1:hover,
+#reticle-2:hover,
+#reticle-3:hover {
   cursor: pointer;
 }
 
 .page-height {
   height: 100vh;
-  background-image: url('images/wall-bg.png');
+  background-image: url("images/wall-bg.png");
   position: relative;
 }
 
@@ -93,6 +98,42 @@ body {
 
 .reticle-color {
   background-color: rgb(252, 34, 43);
+}
+
+.modal-mario {
+  width: 30%;
+}
+
+.modal-cloud {
+  position: relative;
+  width: 60%;
+}
+
+.modal-text {
+  position: absolute;
+  top: 15%;
+  font-family: "Ubuntu", sans-serif;
+  width: 50%;
+  font-size: 1.2rem;
+}
+
+.star-btn {
+  width: 25%;
+  position: absolute;
+  right: 0px;
+  top: 180px;
+  border-style: none;
+  cursor: pointer;
+}
+
+#instructions {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal:hover, #reticles {
