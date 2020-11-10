@@ -29,17 +29,17 @@
                 <div id="reticle-3" class="m-4 reticle-color"></div>
             </div>
         </div>
-        <div class="modal fade" id="color-modal" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal" id="color-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Select a color!</h5>
-                        <button type="button" class="close">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Select a custom color!</h5>
+                        <button type="button" class="close" id="close-color">
                             <span>&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
-                        <canvas id="custom-color"></canvas>
+                    <div class="modal-body d-flex justify-content-center">
+                        <input type="color" id="color-input">
                     </div>
                 </div>
             </div>

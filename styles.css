@@ -70,3 +70,12 @@ body {
 .reticle-color {
   background-color: rgb(252, 34, 43);
 }
+
+.modal:hover, #reticles {
+  cursor: default;
+}
+
+#color-input {
+  width: 100px;
+  height: 100px;
+}
