@@ -148,3 +148,9 @@ body {
   width: 100px;
   height: 100px;
 }
+
+.media-player {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+}
