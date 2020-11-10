@@ -50,26 +50,50 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50px;
+  filter: drop-shadow(0 0 0.3rem #000000);
 }
 
 #reticle-2 {
   width: 20px;
   height: 20px;
   border-radius: 50px;
+  filter: drop-shadow(0 0 0.3rem #000000);
 }
 
 #reticle-3 {
   width: 30px;
   height: 30px;
   border-radius: 50px;
+  filter: drop-shadow(0 0 0.3rem #000000);
 }
 
 #reticles {
   position: absolute;
-  bottom: 5%;
-  background-color: white;
-  border: 2px solid black;
+  bottom: 0px;
   filter: drop-shadow(0 0 0.3rem #000000);
+}
+
+.reticle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reticle-block {
+  background-image: url('images/block-blank.png');
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 70px;
+}
+
+.reticle-tube {
+  background-image: url('images/mario-tube.png');
+  background-size: contain;
+  height: 110px;
+  width: 117px;
 }
 
 .reticle-color {
@@ -101,6 +125,7 @@ body {
   border-style: none;
   cursor: pointer;
 }
+
 #instructions {
   position: fixed;
   left: 0;
@@ -109,4 +134,17 @@ body {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal:hover, #reticles {
+  cursor: default;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#color-input {
+  width: 100px;
+  height: 100px;
 }

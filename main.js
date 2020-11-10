@@ -4,7 +4,6 @@ const colors = document.getElementById('colors');
 const reticles = document.getElementById('reticles');
 const reticleColor = document.querySelectorAll('.reticle-color');
 const trash = document.getElementById('trash');
-let isPainting = false;
 const saveBtn = document.getElementById('save-btn');
 const red = 'rgb(252, 34, 43)';
 const green = 'rgb(62, 178, 78)';
@@ -12,17 +11,22 @@ const purple = 'rgb(79, 33, 138)';
 const yellow = 'rgb(254, 203, 47)';
 const introModal = document.getElementById('instructions');
 const starBtn = document.querySelector('.star-btn');
+const colorInput = document.getElementById('color-input');
+const colorModal = document.getElementById('color-modal');
+const colorModalClose = document.getElementById('close-color');
+let isPainting = false;
 
 canvas.addEventListener('mousedown', startPosition);
 canvas.addEventListener('mouseup', finishedPosition);
 canvas.addEventListener('mousemove', paint);
-colors.addEventListener('click', changeColor);
+colors.addEventListener('click', handleColorClick);
 saveBtn.addEventListener('click', saveImg);
 reticles.addEventListener('click', setReticleSize);
 trash.addEventListener('click', clearCanvas);
 introModal.addEventListener('load', openModal);
 starBtn.addEventListener('click', hideModal);
-
+colorInput.addEventListener('focusout', handleColorClick);
+colorModalClose.addEventListener('click', closeColorModal);
 
 canvas.width = window.innerWidth - 10;
 canvas.height = window.innerHeight - 10;
@@ -46,28 +50,23 @@ function paint() {
   ctx.moveTo(event.clientX, event.clientY);
 }
 
-function changeColor() {
+function handleColorClick() {
   switch (event.target.id) {
     case 'red':
-    ctx.strokeStyle = red;
-    ctx.shadowColor = red;
-    setReticleColor(red);
+      setColor(red);
     break;
     case 'green':
-    ctx.strokeStyle = green;
-    ctx.shadowColor = green;
-    setReticleColor(green);
+      setColor(green);
     break;
     case 'purple':
-    ctx.strokeStyle = purple;
-    ctx.shadowColor = purple;
-    setReticleColor(purple);
+      setColor(purple);
     break;
     case 'yellow':
-    ctx.strokeStyle = yellow;
-    ctx.shadowColor = yellow;
-    setReticleColor(yellow);
+      setColor(yellow);
     break;
+    default:
+      openColorModal();
+      setColor(colorInput.value);
   }
 }
 
@@ -85,7 +84,9 @@ function setReticleSize() {
   }
 }
 
-function setReticleColor(color) {
+function setColor(color) {
+  ctx.strokeStyle = color;
+  ctx.shadowColor = color;
   for (let i = 0; i < reticleColor.length; i++) {
     reticleColor[i].style.backgroundColor = color;
   }
@@ -116,6 +117,14 @@ function openModal(){
 
 function hideModal(){
   introModal.close();
+}
+
+function openColorModal() {
+  colorModal.classList.add('show', 'd-block');
+}
+
+function closeColorModal() {
+  colorModal.classList.remove('show', 'd-block')
 }
 
 start();

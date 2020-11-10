@@ -17,16 +17,47 @@
             <img src="images/save-block.png" id="save" alt="save-block" draggable="false">
         </a>
         <div id="colors">
+            <img src="images/rainbow-star.png" alt="rainbow-star" class="color" id="custom">
             <img src="images/Hat-Mario-icon.png" alt="red-color-hat" class="color" id="red">
             <img src="images/Hat-Luigi-icon.png" alt="green-color-hat" class="color" id="green">
             <img src="images/Hat-Waluigi-icon.png" alt="yellow-color-hat" class="color" id="purple">
             <img src="images/Hat-Wario-icon.png" alt="purple-color-hat" class="color" id="yellow">
         </div>
         <div class="row justify-content-center">
-            <div id="reticles" class="d-flex align-items-center rounded">
-                <div id="reticle-1" class="m-4 reticle-color"></div>
-                <div id="reticle-2" class="m-4 reticle-color"></div>
-                <div id="reticle-3" class="m-4 reticle-color"></div>
+            <div id="reticles" class="d-flex">
+                <div class="reticle-container">
+                    <div class="mx-5 my-2 reticle-block">
+                        <div id="reticle-1" class="reticle-color"></div>
+                    </div>
+                    <div class="reticle-tube"></div>
+                </div>
+                <div class="reticle-container">
+                    <div class="mx-5 my-2 reticle-block">
+                        <div id="reticle-2" class="reticle-color"></div>
+                    </div>
+                    <div class="reticle-tube"></div>
+                </div>
+                <div class="reticle-container">
+                    <div class="mx-5 my-2 reticle-block">
+                        <div id="reticle-3" class="reticle-color"></div>
+                    </div>
+                    <div class="reticle-tube"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="color-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Select a custom color!</h5>
+                        <button type="button" class="close" id="close-color">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body d-flex justify-content-center">
+                        <input type="color" id="color-input">
+                    </div>
+                </div>
             </div>
         </div>
 
