@@ -1,5 +1,6 @@
 body {
   cursor: url(images/spray-can.png), crosshair;
+  overflow: hidden;
 }
 
 #colors {
@@ -18,9 +19,7 @@ body {
 .color:hover,
 #save:hover,
 #trash:hover,
-#reticle-1:hover,
-#reticle-2:hover,
-#reticle-3:hover {
+.reticle-block:hover {
   cursor: pointer;
 }
 
@@ -153,4 +152,5 @@ body {
   position: absolute;
   bottom: 1%;
   left: 1%;
+  width: 250px;
 }
