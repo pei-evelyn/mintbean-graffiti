@@ -16,7 +16,6 @@ body {
   filter: drop-shadow(0 0 0.6rem #000000);
 }
 
-
 .color:hover,
 #save:hover,
 #trash:hover,
@@ -194,15 +193,15 @@ body {
 }
 
 .logo {
-  width: 17%;
+  width: 13%;
   position: absolute;
   bottom: 140px;
-  margin-left: 35px;
+  margin-left: 40px;
 }
 
 .graffiti-logo {
   position: absolute;
   bottom: 100px;
-  width: 17%;
-  margin-left: 35px;
+  width: 13%;
+  margin-left: 40px;
 }
