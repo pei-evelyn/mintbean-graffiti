@@ -80,7 +80,7 @@ body {
 }
 
 .reticle-block {
-  background-image: url('images/block-blank.png');
+  background-image: url("images/block-blank.png");
   background-size: contain;
   display: flex;
   justify-content: center;
@@ -90,7 +90,7 @@ body {
 }
 
 .reticle-tube {
-  background-image: url('images/mario-tube.png');
+  background-image: url("images/mario-tube.png");
   background-size: contain;
   height: 110px;
   width: 117px;
@@ -136,7 +136,8 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal:hover, #reticles {
+.modal:hover,
+#reticles {
   cursor: default;
 }
 
@@ -153,4 +154,18 @@ body {
   position: absolute;
   bottom: 1%;
   left: 1%;
+}
+
+.logo {
+  width: 17%;
+  position: absolute;
+  bottom: 140px;
+  margin-left: 35px;
+}
+
+.graffiti-logo {
+  position: absolute;
+  bottom: 100px;
+  width: 17%;
+  margin-left: 35px;
 }
