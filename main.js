@@ -30,9 +30,7 @@ introModal.addEventListener('load', openModal);
 starBtn.addEventListener('click', hideModal);
 colorInput.addEventListener('focusout', handleColorClick);
 colorModalClose.addEventListener('click', closeColorModal);
-
-canvas.width = window.innerWidth - 10;
-canvas.height = window.innerHeight - 10;
+window.addEventListener('resize', resizeCanvas);
 
 function startPosition() {
   isPainting = true;
@@ -115,6 +113,8 @@ function setColor(color) {
 }
 
 function start() {
+  canvas.width = window.innerWidth - 10;
+  canvas.height = window.innerHeight - 10;
   ctx.strokeStyle = red;
   ctx.shadowColor = red;
   ctx.shadowOffsetX= 0;
@@ -147,6 +147,17 @@ function openColorModal() {
 
 function closeColorModal() {
   colorModal.classList.remove('show', 'd-block')
+}
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth - 10;
+  canvas.height = window.innerHeight - 10;
+  ctx.strokeStyle = red;
+  ctx.shadowColor = red;
+  ctx.shadowOffsetX= 0;
+  ctx.shadowOffsetY = 0;
+  ctx.shadowBlur = 10;
+  ctx.lineWidth = 20;
 }
 
 start();
