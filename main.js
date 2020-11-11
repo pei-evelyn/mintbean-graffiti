@@ -26,7 +26,7 @@ colors.addEventListener('click', handleColorClick);
 saveBtn.addEventListener('click', takeScreenshot)
 reticles.addEventListener('click', setReticleSize);
 trash.addEventListener('click', clearCanvas);
-introModal.addEventListener('load', openModal);
+// introModal.addEventListener('load', openModal);
 starBtn.addEventListener('click', hideModal);
 colorInput.addEventListener('focusout', handleColorClick);
 colorModalClose.addEventListener('click', closeColorModal);
@@ -121,19 +121,15 @@ function start() {
   ctx.shadowOffsetY = 0;
   ctx.shadowBlur = 10;
   ctx.lineWidth = 20;
-  openModal();
 }
 
 function clearCanvas() {
   ctx.clearRect(0,0,canvas.width, canvas.height);
 }
 
-function openModal(){
-  introModal.showModal();
-}
 
 function hideModal(){
-  introModal.close();
+  introModal.classList.add('d-none');
 }
 
 function openColorModal() {

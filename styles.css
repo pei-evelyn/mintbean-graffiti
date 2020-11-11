@@ -20,7 +20,10 @@ body {
   filter: drop-shadow(0 0 0.6rem #000000);
 }
 
-.color:hover, #save:hover, #trash:hover, .reticle-block:hover {
+.color:hover,
+#save:hover,
+#trash:hover,
+.reticle-block:hover {
   cursor: pointer;
 }
 
@@ -103,7 +106,8 @@ body {
 
 .modal-mario {
   margin-left: 7rem;
-  width: 220px;
+  width: 270px;
+  object-fit: contain;
 }
 
 .modal-cloud {
@@ -113,7 +117,7 @@ body {
 
 .modal-text {
   position: absolute;
-  top: 15%;
+  top: 12%;
   font-family: "Ubuntu", sans-serif;
   width: 45%;
   font-size: 1.1rem;
@@ -123,7 +127,7 @@ body {
   width: 25%;
   position: absolute;
   right: 0px;
-  top: 170px;
+  top: 190px;
   border-style: none;
   cursor: pointer;
 }
@@ -138,7 +142,9 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal:hover, #reticles, #instructions {
+.modal:hover,
+#reticles,
+#instructions {
   cursor: default;
 }
 
@@ -221,13 +227,19 @@ body {
   #custom {
     width: 70px;
   }
-  .logo, .graffiti-logo {
+  .logo,
+  .graffiti-logo {
     margin-left: 10px;
   }
-  #red, #green, #purple, #yellow, .reticle-tube {
+  #red,
+  #green,
+  #purple,
+  #yellow,
+  .reticle-tube {
     display: none;
   }
-  #save, #trash {
+  #save,
+  #trash {
     width: 70px;
     height: 70px;
   }
@@ -240,7 +252,8 @@ body {
   .reticle-block {
     margin: 0.5rem;
   }
-  .logo, .graffiti-logo {
+  .logo,
+  .graffiti-logo {
     display: none;
   }
   .star-btn {
