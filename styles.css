@@ -16,10 +16,7 @@ body {
   filter: drop-shadow(0 0 0.6rem #000000);
 }
 
-.color:hover,
-#save:hover,
-#trash:hover,
-.reticle-block:hover {
+.color:hover, #save:hover, #trash:hover, .reticle-block:hover {
   cursor: pointer;
 }
 
@@ -138,9 +135,7 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal:hover,
-#reticles,
-#instructions {
+.modal:hover, #reticles, #instructions {
   cursor: default;
 }
 
@@ -158,6 +153,20 @@ body {
   bottom: 1%;
   left: 1%;
   width: 250px;
+}
+
+.logo {
+  width: 13%;
+  position: absolute;
+  bottom: 140px;
+  margin-left: 40px;
+}
+
+.graffiti-logo {
+  position: absolute;
+  bottom: 100px;
+  width: 13%;
+  margin-left: 40px;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 760px) {
@@ -200,11 +209,17 @@ body {
   .modal-text-content {
     display: none;
   }
+  .reticle-block {
+    margin: 1rem 1.5rem;
+  }
   #colors {
     right: 2%;
   }
   #custom {
     width: 70px;
+  }
+  .logo, .graffiti-logo {
+    margin-left: 10px;
   }
   #red, #green, #purple, #yellow, .reticle-tube {
     display: none;
@@ -235,18 +250,4 @@ body {
   .media-player {
     display: none;
   }
-}
-
-.logo {
-  width: 13%;
-  position: absolute;
-  bottom: 140px;
-  margin-left: 40px;
-}
-
-.graffiti-logo {
-  position: absolute;
-  bottom: 100px;
-  width: 13%;
-  margin-left: 40px;
 }
