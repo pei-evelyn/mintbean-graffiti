@@ -16,10 +16,7 @@ body {
   filter: drop-shadow(0 0 0.6rem #000000);
 }
 
-.color:hover,
-#save:hover,
-#trash:hover,
-.reticle-block:hover {
+.color:hover, #save:hover, #trash:hover, .reticle-block:hover {
   cursor: pointer;
 }
 
@@ -87,6 +84,7 @@ body {
   align-items: center;
   height: 70px;
   width: 70px;
+  margin: 2rem 4rem;
 }
 
 .reticle-tube {
@@ -137,9 +135,7 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal:hover,
-#reticles,
-#instructions {
+.modal:hover, #reticles, #instructions {
   cursor: default;
 }
 
@@ -159,6 +155,20 @@ body {
   width: 250px;
 }
 
+.logo {
+  width: 13%;
+  position: absolute;
+  bottom: 140px;
+  margin-left: 40px;
+}
+
+.graffiti-logo {
+  position: absolute;
+  bottom: 100px;
+  width: 13%;
+  margin-left: 40px;
+}
+
 @media screen and (max-width: 1024px) and (min-width: 760px) {
   .modal-cloud {
     width: 550px;
@@ -173,36 +183,71 @@ body {
   .media-player {
     width: 150px;
   }
+  .reticle-block {
+    margin: 1.5rem 3rem;
+  }
 }
 
 @media screen and (max-width: 760px) {
   .modal-cloud {
     height: 200px;
-    width: 400px;
+    width: 300px;
   }
   .modal-mario {
     margin-left: 2rem;
     width: 100px;
   }
   .modal-text {
-    font-size: 0.5rem;
-    width: 70%;
+    font-size: 0.7rem;
   }
   .star-btn {
-    top: 80px;
+    top: 70px;
+  }
+  .media-player {
+    width: 100px;
+  }
+  .modal-text-content {
+    display: none;
+  }
+  .reticle-block {
+    margin: 1rem 1.5rem;
+  }
+  #colors {
+    right: 2%;
+  }
+  #custom {
+    width: 70px;
+  }
+  .logo, .graffiti-logo {
+    margin-left: 10px;
+  }
+  #red, #green, #purple, #yellow, .reticle-tube {
+    display: none;
+  }
+  #save, #trash {
+    width: 70px;
+    height: 70px;
   }
 }
 
-.logo {
-  width: 13%;
-  position: absolute;
-  bottom: 140px;
-  margin-left: 40px;
-}
-
-.graffiti-logo {
-  position: absolute;
-  bottom: 100px;
-  width: 13%;
-  margin-left: 40px;
+@media screen and (max-width: 379px) {
+  #colors {
+    top: 50%;
+  }
+  .reticle-block {
+    margin: 0.5rem;
+  }
+  .logo, .graffiti-logo {
+    display: none;
+  }
+  .star-btn {
+    width: 40%;
+    left: 140px;
+  }
+  ul {
+    padding: 0;
+  }
+  .media-player {
+    display: none;
+  }
 }
