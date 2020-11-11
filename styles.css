@@ -248,7 +248,7 @@ body {
   }
 }
 
-@media screen and (max-width: 379px) {
+@media screen and (max-width: 414px) {
   #colors {
     top: 50%;
   }
