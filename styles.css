@@ -1,6 +1,9 @@
+html {
+  overflow: hidden;
+}
+
 body {
   cursor: url(images/spray-can.png), crosshair;
-  overflow: hidden;
 }
 
 #canvas {
