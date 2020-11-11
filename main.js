@@ -23,7 +23,7 @@ canvas.addEventListener("touchstart", convertTouchstartToMousedown);
 canvas.addEventListener("touchend", convertTouchendToMouseup);
 canvas.addEventListener("touchmove", convertTouchmoveToMousemove);
 colors.addEventListener('click', handleColorClick);
-saveBtn.addEventListener('click', saveImg);
+saveBtn.addEventListener('click', takeScreenshot)
 reticles.addEventListener('click', setReticleSize);
 trash.addEventListener('click', clearCanvas);
 introModal.addEventListener('load', openModal);
@@ -113,8 +113,8 @@ function setColor(color) {
 }
 
 function start() {
-  canvas.width = window.innerWidth - 10;
-  canvas.height = window.innerHeight - 10;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
   ctx.strokeStyle = red;
   ctx.shadowColor = red;
   ctx.shadowOffsetX= 0;
@@ -150,14 +150,22 @@ function closeColorModal() {
 }
 
 function resizeCanvas() {
-  canvas.width = window.innerWidth - 10;
-  canvas.height = window.innerHeight - 10;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
   ctx.strokeStyle = red;
   ctx.shadowColor = red;
   ctx.shadowOffsetX= 0;
   ctx.shadowOffsetY = 0;
   ctx.shadowBlur = 10;
   ctx.lineWidth = 20;
+}
+
+function takeScreenshot() {
+  html2canvas(canvas)
+    .then((canvas) => {
+      const dataURL = canvas.toDataURL('image/png');
+      saveBtn.setAttribute('href', dataURL);
+    })
 }
 
 start();
