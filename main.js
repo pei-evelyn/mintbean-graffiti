@@ -19,9 +19,9 @@ let isPainting = false;
 canvas.addEventListener('mousedown', startPosition);
 canvas.addEventListener('mouseup', finishedPosition);
 canvas.addEventListener('mousemove', paint);
-canvas.addEventListener("touchstart", convertTouchstartToMousedown);
-canvas.addEventListener("touchend", convertTouchendToMouseup);
-canvas.addEventListener("touchmove", convertTouchmoveToMousemove);
+canvas.addEventListener('touchstart', convertTouchstartToMousedown);
+canvas.addEventListener('touchend', convertTouchendToMouseup);
+canvas.addEventListener('touchmove', convertTouchmoveToMousemove);
 colors.addEventListener('click', handleColorClick);
 saveBtn.addEventListener('click', takeScreenshot)
 reticles.addEventListener('click', setReticleSize);
@@ -53,7 +53,7 @@ function paint() {
 
 function convertTouchstartToMousedown() {
   const touch = event.touches[0];
-  const mouseEvent = new MouseEvent("mousedown", {
+  const mouseEvent = new MouseEvent('mousedown', {
     clientX: touch.clientX,
     clientY: touch.clientY
   });
@@ -61,13 +61,13 @@ function convertTouchstartToMousedown() {
 }
 
 function convertTouchendToMouseup() {
-  const mouseEvent = new MouseEvent("mouseup", {});
+  const mouseEvent = new MouseEvent('mouseup', {});
   canvas.dispatchEvent(mouseEvent);
 }
 
 function convertTouchmoveToMousemove() {
   const touch = event.touches[0];
-  const mouseEvent = new MouseEvent("mousemove", {
+  const mouseEvent = new MouseEvent('mousemove', {
     clientX: touch.clientX,
     clientY: touch.clientY
   });
