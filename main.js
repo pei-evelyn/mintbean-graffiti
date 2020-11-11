@@ -124,11 +124,6 @@ function start() {
   openModal();
 }
 
-function saveImg() {
-  const dataURL = canvas.toDataURL('image/png');
-  saveBtn.setAttribute('href', dataURL);
-}
-
 function clearCanvas() {
   ctx.clearRect(0,0,canvas.width, canvas.height);
 }
