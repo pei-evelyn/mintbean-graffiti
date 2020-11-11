@@ -87,6 +87,7 @@ body {
   align-items: center;
   height: 70px;
   width: 70px;
+  margin: 2rem 4rem;
 }
 
 .reticle-tube {
@@ -173,6 +174,9 @@ body {
   .media-player {
     width: 150px;
   }
+  .reticle-block {
+    margin: 1.5rem 3rem;
+  }
 }
 
 @media screen and (max-width: 760px) {
@@ -199,6 +203,9 @@ body {
   #colors {
     right: 2%;
   }
+  #custom {
+    width: 70px;
+  }
   #red, #green, #purple, #yellow, .reticle-tube {
     display: none;
   }
@@ -211,6 +218,22 @@ body {
 @media screen and (max-width: 379px) {
   #colors {
     top: 50%;
+  }
+  .reticle-block {
+    margin: 0.5rem;
+  }
+  .logo, .graffiti-logo {
+    display: none;
+  }
+  .star-btn {
+    width: 40%;
+    left: 140px;
+  }
+  ul {
+    padding: 0;
+  }
+  .media-player {
+    display: none;
   }
 }
 
