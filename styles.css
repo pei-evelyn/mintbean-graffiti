@@ -171,17 +171,38 @@ body {
 @media screen and (max-width: 760px) {
   .modal-cloud {
     height: 200px;
-    width: 400px;
+    width: 300px;
   }
   .modal-mario {
     margin-left: 2rem;
     width: 100px;
   }
   .modal-text {
-    font-size: 0.5rem;
-    width: 70%;
+    font-size: 0.7rem;
   }
   .star-btn {
-    top: 80px;
+    top: 70px;
+  }
+  .media-player {
+    width: 100px;
+  }
+  .modal-text-content {
+    display: none;
+  }
+  #colors {
+    right: 2%;
+  }
+  #red, #green, #purple, #yellow, .reticle-tube {
+    display: none;
+  }
+  #save, #trash {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 379px) {
+  #colors {
+    top: 50%;
   }
 }
