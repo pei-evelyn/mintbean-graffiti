@@ -1,5 +1,6 @@
 body {
   cursor: url(images/spray-can.png), crosshair;
+  overflow: hidden;
 }
 
 #colors {
@@ -15,7 +16,10 @@ body {
   filter: drop-shadow(0 0 0.6rem #000000);
 }
 
-.color:hover, #save:hover, #trash:hover, #reticle-1:hover, #reticle-2:hover, #reticle-3:hover {
+.color:hover,
+#save:hover,
+#trash:hover,
+.reticle-block:hover {
   cursor: pointer;
 }
 
@@ -76,7 +80,7 @@ body {
 }
 
 .reticle-block {
-  background-image: url('images/block-blank.png');
+  background-image: url("images/block-blank.png");
   background-size: contain;
   display: flex;
   justify-content: center;
@@ -86,7 +90,7 @@ body {
 }
 
 .reticle-tube {
-  background-image: url('images/mario-tube.png');
+  background-image: url("images/mario-tube.png");
   background-size: contain;
   height: 110px;
   width: 117px;
@@ -133,7 +137,9 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal:hover, #reticles {
+.modal:hover,
+#reticles,
+#instructions {
   cursor: default;
 }
 
@@ -150,6 +156,7 @@ body {
   position: absolute;
   bottom: 1%;
   left: 1%;
+  width: 250px;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 760px) {
@@ -205,4 +212,18 @@ body {
   #colors {
     top: 50%;
   }
+}
+
+.logo {
+  width: 13%;
+  position: absolute;
+  bottom: 140px;
+  margin-left: 40px;
+}
+
+.graffiti-logo {
+  position: absolute;
+  bottom: 100px;
+  width: 13%;
+  margin-left: 40px;
 }
