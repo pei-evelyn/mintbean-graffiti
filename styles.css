@@ -74,6 +74,7 @@ body {
 }
 
 #reticles {
+  display: flex;
   position: absolute;
   bottom: 0px;
   filter: drop-shadow(0 0 0.3rem #000000);
@@ -268,5 +269,12 @@ body {
   }
   .media-player {
     display: none;
+  }
+  #reticles {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 61%;
+    filter: drop-shadow(0 0 0.3rem #000000);
   }
 }
