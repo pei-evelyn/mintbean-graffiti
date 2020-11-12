@@ -251,8 +251,10 @@ body {
 
 @media screen and (max-width: 414px) {
   #colors {
-    top: 52%;
+    top: 51%;
     right: 3%;
+    width: 70px;
+    height: 67px;
   }
   .reticle-block {
     margin: 0 0 10px;
@@ -273,6 +275,7 @@ body {
   }
   #reticles {
     display: block;
+    height: 230px;
     position: absolute;
     right: 3%;
     top: 15%;
