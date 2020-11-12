@@ -251,10 +251,11 @@ body {
 
 @media screen and (max-width: 414px) {
   #colors {
-    top: 50%;
+    top: 52%;
+    right: 3%;
   }
   .reticle-block {
-    margin: 0.5rem;
+    margin: 0 0 10px;
   }
   .logo,
   .graffiti-logo {
@@ -273,8 +274,8 @@ body {
   #reticles {
     display: block;
     position: absolute;
-    right: 0;
-    top: 61%;
+    right: 3%;
+    top: 15%;
     filter: drop-shadow(0 0 0.3rem #000000);
   }
 }
