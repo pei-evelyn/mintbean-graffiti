@@ -2,6 +2,11 @@
 
 A Mario themed MS Paint clone.
 
+## Creators
+- Connor Ashlock (https://www.linkedin.com/in/connorashlock/)
+- Matthew Chen (https://www.linkedin.com/in/matthew-chen10/)
+- Evelyn Pei (https://www.linkedin.com/in/evelyn-pei/)
+
 ## Technologies Used
 
 - JavaScript ES5/ES6
